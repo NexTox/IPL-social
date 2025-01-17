@@ -22,4 +22,13 @@ function specialCharactersChecker(password) {
     return false;
 }
 
-module.exports = {passwordChecker, charactersChecker, specialCharactersChecker};
+function digitChecker(password){
+    for(let i = 0; i < password.length; i++) {
+        if(!isNaN(password[i]) && password[i] !== ' ') {
+            return true;
+        }
+    }
+    return false;
+}
+
+module.exports = {passwordChecker, charactersChecker, specialCharactersChecker,digitChecker};

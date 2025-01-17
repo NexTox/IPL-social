@@ -1,4 +1,4 @@
-const {passwordChecker,charactersChecker,specialCharactersChecker} = require('../passwordChecker');
+const {passwordChecker,charactersChecker,specialCharactersChecker,digitChecker} = require('../passwordChecker');
 
 describe('Password validation', () => {
     it('should return false if password is less than 8 characters', () => {
@@ -37,5 +37,13 @@ describe('Password validation', () => {
         const response = specialCharactersChecker(password);
 
         expect(response).toBe(true);
+    });
+
+    it('should return false if password does not contain a digit', () => {
+        const password = 'short';
+
+        const response = digitChecker(password);
+
+        expect(response).toBe(false);
     });
 });
