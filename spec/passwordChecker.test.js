@@ -70,4 +70,12 @@ describe('Password validation', () => {
 
         expect(response).toBe(false);
     });
+
+    it('should return true if password does not contain IPL', () => {
+        const password = 'shortitoto';
+
+        const response = IplNotPresentChecker(password);
+
+        expect(response).toBe(true);
+    });
 });
