@@ -30,4 +30,12 @@ describe('Password validation', () => {
 
         expect(response).toBe(false);
     });
+
+    it('should return true if password contains a special characters', () => {
+        const password = 'shortiyto!';
+
+        const response = specialCharactersChecker(password);
+
+        expect(response).toBe(true);
+    });
 });
