@@ -32,8 +32,8 @@ function digitChecker(password){
 }
 
 function IplNotPresentChecker(password){
-    const IPL = ['IPL'];
-    if (password.includes(IPL[0])) {
+    const IPL = ['IPL', 'ipl'];
+    if (password.includes(IPL[0]) || password.includes(IPL[1])) {
         return false;
     }
     return true;

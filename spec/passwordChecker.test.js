@@ -62,4 +62,12 @@ describe('Password validation', () => {
 
         expect(response).toBe(false);
     });
+
+    it('should return false if password contains ipl (Lower)', () => {
+        const password = 'shortitotoipl';
+
+        const response = IplNotPresentChecker(password);
+
+        expect(response).toBe(false);
+    });
 });
