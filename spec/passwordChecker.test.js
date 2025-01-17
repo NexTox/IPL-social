@@ -46,4 +46,12 @@ describe('Password validation', () => {
 
         expect(response).toBe(false);
     });
+
+    it('should return true if password contains a digit', () => {
+        const password = 'short1';
+
+        const response = digitChecker(password);
+
+        expect(response).toBe(true);
+    });
 });
