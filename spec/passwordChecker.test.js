@@ -15,4 +15,11 @@ describe('Password validation', () => {
 
         expect(response).toBe(true);
     });
+    it('should return true if password is more than 8 characters', () => {
+        const password = 'shortiytoto';
+
+        const response = passwordChecker(password);
+
+        expect(response).toBe(true);
+    });
 });
