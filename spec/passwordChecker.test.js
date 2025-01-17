@@ -78,4 +78,13 @@ describe('Password validation', () => {
 
         expect(response).toBe(true);
     });
+
+    it('should return true if password is valid', () => {
+        const password = 'shortitoto1!';
+
+        const response = passwordChecker(password);
+
+        expect(response).toBe(true);
+
+    });
 });

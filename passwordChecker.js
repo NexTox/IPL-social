@@ -1,5 +1,6 @@
 function passwordChecker(password) {
-    if(specialCharactersChecker(password) && charactersChecker(password)) {
+    if(specialCharactersChecker(password) && charactersChecker(password)
+    && digitChecker(password) && IplNotPresentChecker(password)) {
         return true;
     }
     return false;
