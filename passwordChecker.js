@@ -9,4 +9,14 @@ function charactersChecker(password) {
     return true;
 }
 
-module.exports = {passwordChecker, charactersChecker};
+function specialCharactersChecker(password) {
+    const specialCharacters = ['!','@','#','$','%','^','&','*','(',')','_','-','+','=','{','}','[',']','|','\\',':',';','"',"'",'<','>','?',',','.','/','~','`'];
+    for(let i = 0; i < password.length; i++) {
+        if(specialCharacters.includes(password[i])) {
+            return true;
+        }
+    }
+    return false;
+}
+
+module.exports = {passwordChecker, charactersChecker, specialCharactersChecker};
