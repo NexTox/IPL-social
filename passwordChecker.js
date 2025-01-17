@@ -31,4 +31,12 @@ function digitChecker(password){
     return false;
 }
 
-module.exports = {passwordChecker, charactersChecker, specialCharactersChecker,digitChecker};
+function IplNotPresentChecker(password){
+    const IPL = ['IPL'];
+    if (password.includes(IPL[0])) {
+        return false;
+    }
+    return true;
+}
+
+module.exports = {passwordChecker, charactersChecker, specialCharactersChecker,digitChecker,IplNotPresentChecker};

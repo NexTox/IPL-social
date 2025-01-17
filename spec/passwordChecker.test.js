@@ -1,4 +1,4 @@
-const {passwordChecker,charactersChecker,specialCharactersChecker,digitChecker} = require('../passwordChecker');
+const {passwordChecker,charactersChecker,specialCharactersChecker,digitChecker,IplNotPresentChecker} = require('../passwordChecker');
 
 describe('Password validation', () => {
     it('should return false if password is less than 8 characters', () => {
@@ -53,5 +53,13 @@ describe('Password validation', () => {
         const response = digitChecker(password);
 
         expect(response).toBe(true);
+    });
+
+    it('should return false if password contains IPL', () => {
+        const password = 'shortitotoIPL';
+
+        const response = IplNotPresentChecker(password);
+
+        expect(response).toBe(false);
     });
 });
