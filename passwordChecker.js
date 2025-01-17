@@ -1,5 +1,8 @@
 function passwordChecker(password) {
-    return charactersChecker(password);
+    if(specialCharactersChecker(password) && charactersChecker(password)) {
+        return true;
+    }
+    return false;
 }
 
 function charactersChecker(password) {
